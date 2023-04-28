@@ -67,7 +67,9 @@ export default function Cek({ navigation, route }) {
                     }}>Materi {item.judul}</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={{
+                <TouchableOpacity onPress={() => navigation.navigate('Youtube', {
+                    link: item.link
+                })} style={{
                     margin: 20,
                     borderRadius: 20,
                     backgroundColor: colors.primary,

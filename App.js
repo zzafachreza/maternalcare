@@ -12,6 +12,7 @@ import Menu2 from './Screen/Menu2';
 import Menu3 from './Screen/Menu3';
 import Menu4 from './Screen/Menu4';
 import Tentang from './Screen/Tentang';
+import Youtube from './Screen/Youtube';
 
 const Stack = createStackNavigator();
 export default function App() {
@@ -40,6 +41,14 @@ export default function App() {
         <Stack.Screen
           name="Cek"
           component={Cek}
+          options={{
+            headerShown: false,
+          }}
+        />
+
+        <Stack.Screen
+          name="Youtube"
+          component={Youtube}
           options={{
             headerShown: false,
           }}

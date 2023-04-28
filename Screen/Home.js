@@ -86,21 +86,25 @@ export default function Home({ navigation }) {
                 </View>
 
                 <DataMenu onPress={() => navigation.navigate('Cek', {
+                    link: 'f0AILH0wUtU',
                     judul: 'KALA I',
                     menu: 'Menu1',
                     img: require('../A1.png')
                 })} judul="KALA I" img={require('../A1.png')} />
                 <DataMenu onPress={() => navigation.navigate('Cek', {
                     judul: 'KALA II',
+                    link: 'SDFqHTUMYi4',
                     menu: 'Menu2',
                     img: require('../A2.png')
                 })} judul="KALA II" img={require('../A2.png')} />
                 <DataMenu onPress={() => navigation.navigate('Cek', {
+                    link: 'ebNbndgwd4c',
                     judul: 'KALA III',
                     menu: 'Menu3',
                     img: require('../A3.png')
                 })} judul="KALA III" img={require('../A3.png')} />
                 <DataMenu onPress={() => navigation.navigate('Cek', {
+                    link: 'ebNbndgwd4c',
                     judul: 'KALA IV',
                     menu: 'Menu4',
                     img: require('../A4.png')
