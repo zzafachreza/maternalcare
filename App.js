@@ -22,7 +22,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-
+      <StatusBar hidden />
       <Stack.Navigator initialRouteName={'Splash'}>
         <Stack.Screen
           name="Splash"

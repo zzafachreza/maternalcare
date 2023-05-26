@@ -104,7 +104,7 @@ export default function Home({ navigation }) {
                     img: require('../A3.png')
                 })} judul="KALA III" img={require('../A3.png')} />
                 <DataMenu onPress={() => navigation.navigate('Cek', {
-                    link: 'ebNbndgwd4c',
+                    link: 'H1BIar3px28',
                     judul: 'KALA IV',
                     menu: 'Menu4',
                     img: require('../A4.png')

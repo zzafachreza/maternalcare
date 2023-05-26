@@ -112,35 +112,16 @@ export default function ({ navigation, route }) {
                 }}>MATERI {item.judul}</Text>
             </View>
 
-            <ScrollView showsVerticalScrollIndicator={false}>
+            <ScrollView showsVerticalScrollIndicator={false} style={{
+                padding: 10,
+            }}>
                 <Image source={require('../k1a.png')} style={{
-                    width: windowWidth,
+                    width: windowWidth - 30,
                     height: windowHeight / 1.4,
                     resizeMode: 'center'
                 }} />
 
-                <TouchableOpacity style={{
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    padding: 20,
-                    backgroundColor: colors.primary,
-                    margin: 10,
-                    borderRadius: 10,
-                }}>
-                    <Text style={{
-                        fontFamily: fonts.primary.normal,
-                        color: colors.secondary,
-                        fontSize: 12
-                    }}>Pemeriksaan Denyut Jantung Janin (DJJ) dengan Doppler</Text>
-                </TouchableOpacity>
 
-
-                <Image source={require('../k1b.png')} style={{
-                    width: windowWidth - 40,
-                    alignSelf: 'center',
-                    height: windowHeight - 100,
-                    resizeMode: 'contain'
-                }} />
 
                 <TouchableOpacity style={{
                     justifyContent: 'center',
@@ -155,7 +136,7 @@ export default function ({ navigation, route }) {
                         color: colors.secondary,
                         fontSize: 12,
                         textAlign: 'center'
-                    }}>Standar Prosedur Operasional (SPO) Kala I</Text>
+                    }}>Standar Prosedur Operasional (SPO) Kala I (Pemeriksaan Denyut Jantung Janin)</Text>
                 </TouchableOpacity>
 
                 <View style={{

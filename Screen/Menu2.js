@@ -120,28 +120,7 @@ export default function ({ navigation, route }) {
 
                 }} />
 
-                <TouchableOpacity style={{
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    padding: 20,
-                    backgroundColor: colors.primary,
-                    margin: 10,
-                    borderRadius: 10,
-                }}>
-                    <Text style={{
-                        fontFamily: fonts.secondary[600],
-                        color: colors.secondary,
-                        fontSize: 12
-                    }}>Intranatal Kala II</Text>
-                </TouchableOpacity>
 
-
-                <Image source={require('../k2b.png')} style={{
-                    width: windowWidth - 40,
-                    alignSelf: 'center',
-                    height: windowHeight * 3.2,
-                    resizeMode: 'contain'
-                }} />
 
                 <TouchableOpacity style={{
                     justifyContent: 'center',
@@ -156,7 +135,7 @@ export default function ({ navigation, route }) {
                         color: colors.secondary,
                         fontSize: 12,
                         textAlign: 'center'
-                    }}>Standar Prosedur Operasional (SPO) Kala I/II</Text>
+                    }}>Standar Prosedur Operasional (SPO) Kala II (Pertolongan Persalinan)</Text>
                 </TouchableOpacity>
                 <View style={{
                     padding: 10,

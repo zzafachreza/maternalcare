@@ -1,10 +1,13 @@
 import { Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import { colors, fonts } from '../utils'
 import { Icon } from 'react-native-elements'
 import { ScrollView } from 'react-native'
 
 export default function Tentang({ navigation, route }) {
+
+    const [buka1, setBuka1] = useState(false);
+    const [buka2, setBuka2] = useState(false);
 
     return (
         <SafeAreaView style={{
@@ -50,53 +53,59 @@ export default function Tentang({ navigation, route }) {
                     borderColor: colors.border
                 }}>
 
-                    <Text style={{
-                        textAlign: 'center',
+                    <TouchableOpacity onPress={() => {
+                        !buka1 ? setBuka1(true) : setBuka1(false)
+                    }}>
+                        <Text style={{
+                            textAlign: 'center',
 
-                        fontFamily: fonts.secondary[600],
-                        fontSize: 14,
-                        color: colors.secondary,
-                        backgroundColor: colors.primary,
-                        padding: 10,
-                        borderRadius: 20,
-                        marginBottom: 10,
-                    }}>
-                        Peneliti
-                    </Text>
+                            fontFamily: fonts.secondary[600],
+                            fontSize: 14,
+                            color: colors.secondary,
+                            backgroundColor: colors.primary,
+                            padding: 10,
+                            borderRadius: 20,
+                            marginBottom: 10,
+                        }}>
+                            Peneliti
+                        </Text>
+                    </TouchableOpacity>
 
-                    <View style={{
-                        margin: 5,
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }}>
-                        <Image source={require('../wieda.png')} style={{
-                            width: 120,
-                            borderRadius: 10,
-                            height: 150,
-                            resizeMode: 'contain'
-                        }} />
-                    </View>
+                    {buka1 && <View>
+                        <View style={{
+                            margin: 5,
+                            justifyContent: 'center',
+                            alignItems: 'center'
+                        }}>
+                            <Image source={require('../wieda.png')} style={{
+                                width: 120,
+                                borderRadius: 10,
+                                height: 150,
+                                resizeMode: 'contain'
+                            }} />
+                        </View>
 
-                    <Text style={{
-                        textAlign: 'center',
-                        marginHorizontal: 20,
-                        fontFamily: fonts.secondary[600],
-                        fontSize: 14,
-                        color: colors.secondary,
-                        marginVertical: 10,
-                    }}>
-                        Wieda Widyatry Qarragita, S.Kep.,Ners
-                    </Text>
-                    <Text style={{
-                        textAlign: 'center',
-                        marginHorizontal: 20,
-                        fontFamily: fonts.secondary[400],
-                        fontSize: 14,
-                        color: colors.secondary,
-                        marginVertical: 5,
-                    }}>
-                        (Dosen Program Studi Magister Keperawatan (S2) Fakultasi Ilmu Dan Teknologi Kesehatan Universitas Jenderal Achmad Yani Cimahi)
-                    </Text>
+                        <Text style={{
+                            textAlign: 'center',
+                            marginHorizontal: 20,
+                            fontFamily: fonts.secondary[600],
+                            fontSize: 14,
+                            color: colors.secondary,
+                            marginVertical: 10,
+                        }}>
+                            Wieda Widyatry Qarragita, S.Kep.,Ners
+                        </Text>
+                        <Text style={{
+                            textAlign: 'center',
+                            marginHorizontal: 20,
+                            fontFamily: fonts.secondary[400],
+                            fontSize: 14,
+                            color: colors.secondary,
+                            marginVertical: 5,
+                        }}>
+                            (Mahasiswa Program Studi Magister Keperawatan (S2) Fakultasi Ilmu Dan Teknologi Kesehatan Universitas Jenderal Achmad Yani Cimahi)
+                        </Text>
+                    </View>}
                 </View>
 
                 <View style={{
@@ -105,92 +114,103 @@ export default function Tentang({ navigation, route }) {
                     borderRadius: 20,
                     borderColor: colors.border
                 }}>
-                    <Text style={{
-                        textAlign: 'center',
-                        fontFamily: fonts.secondary[600],
-                        fontSize: 14,
-                        color: colors.secondary,
-                        backgroundColor: colors.primary,
-                        padding: 10,
-                        borderRadius: 20,
-                        marginBottom: 10,
+                    <TouchableOpacity onPress={() => {
+                        !buka2 ? setBuka2(true) : setBuka2(false)
                     }}>
-                        Pembimbing
-                    </Text>
-                    <View style={{
-                        margin: 5,
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }}>
-                        <Image source={require('../yayat.png')} style={{
-                            width: 120,
-                            borderRadius: 10,
-                            height: 150,
-                            resizeMode: 'contain'
+                        <Text style={{
+                            textAlign: 'center',
+                            fontFamily: fonts.secondary[600],
+                            fontSize: 14,
+                            color: colors.secondary,
+                            backgroundColor: colors.primary,
+                            padding: 10,
+                            borderRadius: 20,
+                            marginBottom: 10,
+                        }}>
+                            Pembimbing
+                        </Text>
+                    </TouchableOpacity>
+
+                    {buka2 && <View>
+                        <View style={{
+                            margin: 5,
+                            justifyContent: 'center',
+                            alignItems: 'center'
+                        }}>
+                            <Image source={require('../yayat.png')} style={{
+                                width: 120,
+                                borderRadius: 10,
+                                height: 150,
+                                resizeMode: 'contain'
+                            }} />
+                        </View>
+
+                        <Text style={{
+                            textAlign: 'center',
+                            marginHorizontal: 20,
+                            fontFamily: fonts.secondary[600],
+                            fontSize: 14,
+                            color: colors.secondary,
+                            marginVertical: 10,
+                        }}>
+                            Dr. Yayat Suryati, S.Pd., S.Kp., M.Kep.
+                        </Text>
+
+
+
+                        <Text style={{
+                            textAlign: 'center',
+                            marginHorizontal: 20,
+                            fontFamily: fonts.secondary[400],
+                            fontSize: 14,
+                            color: colors.secondary,
+                            marginVertical: 5,
+                        }}>
+                            (Dosen Program Studi Magister Keperawatan (S2) Fakultasi Ilmu Dan Teknologi Kesehatan Universitas Jenderal Achmad Yani Cimahi)
+                        </Text>
+
+                        <View style={{
+                            borderBottomWidth: 1,
+                            borderBottomColor: colors.border,
+                            marginVertical: 10,
                         }} />
-                    </View>
 
-                    <Text style={{
-                        textAlign: 'center',
-                        marginHorizontal: 20,
-                        fontFamily: fonts.secondary[600],
-                        fontSize: 14,
-                        color: colors.secondary,
-                        marginVertical: 10,
-                    }}>
-                        Dr. Yayat Suryati, S.Pd., S.Kp., M.Kep.
-                    </Text>
-                    <Text style={{
-                        textAlign: 'center',
-                        marginHorizontal: 20,
-                        fontFamily: fonts.secondary[400],
-                        fontSize: 14,
-                        color: colors.secondary,
-                        marginVertical: 5,
-                    }}>
-                        (Dosen Program Studi Magister Keperawatan (S2) Fakultasi Ilmu Dan Teknologi Kesehatan Universitas Jenderal Achmad Yani Cimahi)
-                    </Text>
-
-                    <View style={{
-                        borderBottomWidth: 1,
-                        borderBottomColor: colors.border,
-                        marginVertical: 10,
-                    }} />
-
-                    <View style={{
-                        margin: 5,
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }}>
-                        <Image source={require('../juju.png')} style={{
-                            width: 120,
-                            borderRadius: 10,
-                            height: 150,
-                            resizeMode: 'contain'
-                        }} />
-                    </View>
+                        <View style={{
+                            margin: 5,
+                            justifyContent: 'center',
+                            alignItems: 'center'
+                        }}>
+                            <Image source={require('../juju.png')} style={{
+                                width: 120,
+                                borderRadius: 10,
+                                height: 150,
+                                resizeMode: 'contain'
+                            }} />
+                        </View>
 
 
-                    <Text style={{
-                        textAlign: 'center',
-                        marginHorizontal: 20,
-                        fontFamily: fonts.secondary[600],
-                        fontSize: 14,
-                        color: colors.secondary,
-                        marginVertical: 10,
-                    }}>
-                        Juju Juhaeriah, S.Kp, M.Kes.
-                    </Text>
-                    <Text style={{
-                        textAlign: 'center',
-                        marginHorizontal: 20,
-                        fontFamily: fonts.secondary[400],
-                        fontSize: 14,
-                        color: colors.secondary,
-                        marginVertical: 5,
-                    }}>
-                        (Dosen Program Studi Magister Keperawatan (S2) Fakultasi Ilmu Dan Teknologi Kesehatan Universitas Jenderal Achmad Yani Cimahi)
-                    </Text>
+                        <Text style={{
+                            textAlign: 'center',
+                            marginHorizontal: 20,
+                            fontFamily: fonts.secondary[600],
+                            fontSize: 14,
+                            color: colors.secondary,
+                            marginVertical: 10,
+                        }}>
+                            Juju Juhaeriah, S.Kp, M.Kes.
+                        </Text>
+                        <Text style={{
+                            textAlign: 'center',
+                            marginHorizontal: 20,
+                            fontFamily: fonts.secondary[400],
+                            fontSize: 14,
+                            color: colors.secondary,
+                            marginVertical: 5,
+                        }}>
+                            (Dosen Program Studi Magister Keperawatan (S2) Fakultasi Ilmu Dan Teknologi Kesehatan Universitas Jenderal Achmad Yani Cimahi)
+                        </Text>
+                    </View>}
+
                 </View>
 
 

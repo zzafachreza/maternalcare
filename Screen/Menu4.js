@@ -120,28 +120,7 @@ export default function ({ navigation, route }) {
 
                 }} />
 
-                <TouchableOpacity style={{
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    padding: 20,
-                    backgroundColor: colors.primary,
-                    margin: 10,
-                    borderRadius: 10,
-                }}>
-                    <Text style={{
-                        fontFamily: fonts.secondary[600],
-                        color: colors.secondary,
-                        fontSize: 12
-                    }}>Intranatal Kala IV</Text>
-                </TouchableOpacity>
 
-
-                <Image source={require('../k4b.png')} style={{
-                    width: windowWidth - 50,
-                    alignSelf: 'center',
-                    height: windowHeight * 1.2,
-                    resizeMode: 'contain'
-                }} />
 
                 <TouchableOpacity style={{
                     justifyContent: 'center',

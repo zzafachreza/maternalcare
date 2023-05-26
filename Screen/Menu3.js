@@ -126,29 +126,6 @@ export default function ({ navigation, route }) {
 
 
 
-                <TouchableOpacity style={{
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    padding: 20,
-                    backgroundColor: colors.primary,
-                    margin: 10,
-                    borderRadius: 10,
-                }}>
-                    <Text style={{
-                        fontFamily: fonts.secondary[600],
-                        color: colors.secondary,
-                        fontSize: 12
-                    }}>Intranatal Kala III</Text>
-                </TouchableOpacity>
-
-
-                <Image source={require('../k3b.png')} style={{
-                    width: windowWidth - 50,
-                    alignSelf: 'center',
-                    height: windowHeight - 200,
-                    resizeMode: 'contain'
-                }} />
-
 
                 <TouchableOpacity style={{
                     justifyContent: 'center',
@@ -163,7 +140,7 @@ export default function ({ navigation, route }) {
                         color: colors.secondary,
                         fontSize: 12,
                         textAlign: 'center'
-                    }}>Standar Prosedur Operasional (SPO) Kala III</Text>
+                    }}>Standar Prosedur Operasional (SPO) Kala III (Pengeluaran Plasenta)</Text>
                 </TouchableOpacity>
                 <View style={{
                     padding: 10,
